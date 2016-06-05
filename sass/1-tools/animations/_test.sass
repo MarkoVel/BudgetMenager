@@ -1,0 +1,54 @@
+@keyframes bounce-open
+    0%, 20%, 40%, 60%, 80%, 100%
+        transition-timing-function: $ease-in-back
+
+    0%
+        opacity: 0
+        transform: scale(.3)
+    50%
+        opacity: 1
+        transform: scale(1.05)
+    65%
+        transform: scale(.9)
+    80%
+        transform: scale(1.01)
+    90%
+        transform: scale(.97)
+    100%
+        transform: scale(1)
+
+.bounce-open
+    transform-origin: center top
+    animation: bounce-open .3s both
+
+@keyframes bounce-close
+    0%, 20%, 40%, 60%, 80%, 100%
+        transition-timing-function: $ease-in-back
+
+    0%
+        transform: scale(1)
+        opacity: 1
+
+    100%
+        transform: scale(0)
+        opacity: 0
+
+.bounce-close
+    transform-origin: center top
+    animation: bounce-close .3s both
+
+@keyframes scale-close
+    0%, 20%, 40%, 60%, 80%, 100%
+        transition-timing-function: $ease-in-back
+
+    0%
+        transform: scale(1)
+        opacity: 1
+    100%
+        transform: scale(0)
+        opacity: 0
+
+.scale-close
+    overflow: hidden
+    transform-origin: right top
+    animation: scale-close .35s both

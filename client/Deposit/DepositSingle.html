@@ -1,0 +1,31 @@
+<template name="DepositSingle">
+    <div class="deposit hoverable z-depth-1 {{ type }}">
+        <div class="deposit__text">
+            {{ name }}
+        </div><!-- end .deposit__text -->
+
+        <div class="deposit__category">
+            -&nbsp;&nbsp;{{ category }}
+        </div><!-- end .deposit__category -->
+
+        <div class="deposit__date">
+            -&nbsp;&nbsp;{{ dateFormat }}
+        </div><!-- end .deposit__date -->
+
+        <div class="deposit__value {{ type }}">
+            {{ value }}
+            <span class="deposit__value__currency">{{ currency }}</span>
+        </div><!-- end .deposit__value -->
+
+        <div class="deposit__more-wrapper">
+            <a class='dropdown-button deposit-more-btn hide-elem' href='#' data-activates='depositMore_{{_id}}'>
+                <i class="material-icons">more_vert</i>
+            </a>
+            <!-- Dropdown Structure -->
+            <ul id='depositMore_{{_id}}' class='dropdown-content'>
+                <li><a href="#!" class="deposit__remove">Remove</a></li>
+                <!-- <li><a href="#!">Edit</a></li> -->
+            </ul>
+        </div> <!-- end of .deposit-more-wrapper -->
+    </div><!-- end .deposit -->
+</template>

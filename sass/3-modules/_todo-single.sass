@@ -1,0 +1,70 @@
+.todo
+	justify-content: space-between
+	align-items: center
+	display: flex
+	min-height: 46px
+	position: relative
+
+	&.editMode
+		.todo__text
+			display: none
+		.todo__update-form
+			display: flex
+	&.checked
+		.todo__text
+			color: $gray-dark
+			text-decoration: line-through
+	
+	&:hover
+	    .hide-elem
+	        opacity: 1
+
+	.hide-elem
+	    opacity: 0
+	    transition: opacity 0.2s ease-in-out
+	    @media(max-width: 1024px)
+	        opacity: 1
+
+	&:last-child
+		.todo__text
+			border-bottom: none
+
+	+e('checkbox')
+		+size(20px)
+		margin-right: 32px
+
+		[type="checkbox"].filled-in:checked + label:after
+			background: $accent
+
+	+e('update-form')
+		display: none
+		flex: 1
+		justify-content: space-between
+		align-items: center
+		margin-right: 30px
+
+		.update-task-form
+			flex: 1
+
+		.update-task-close
+			padding: 0 5px
+			margin-left: 10px
+
+	+e('text')
+		font-size: 14px
+		line-height: 46px
+		border-bottom: 1px solid $gray-light
+		flex: 1
+
+	+e('more-wrapper')
+		+position(absolute, 50% 0px null null)
+		text-align: right
+		transform: translateY(-50%)
+		z-index: 1
+		i
+			color: $gray-dark
+
+
+	@media(max-width: 640px)
+		+e('checkbox')
+			margin-right: 15px

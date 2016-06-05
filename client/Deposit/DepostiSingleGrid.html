@@ -1,0 +1,34 @@
+<template name="DepositSingleGrid">
+	<div class="col l4 m6 s12">
+		<div class="deposit-grid hoverable z-depth-1">
+			<div class="deposit-grid__header {{ type }} ">
+				<div class="deposit-grid__header__value {{ type }}">
+				    {{ value }}
+				    <span class="deposit-grid__header__value__currency">{{ currency }}</span>
+				</div><!-- end .deposit__value -->	
+			</div> <!-- end of .deposit-grid__header -->
+			<div class="deposit-grid__body">
+				<p class="deposit-grid__body__text">
+					{{ name }}
+				</p>
+				<div class="deposit-grid__body__info">
+					<p class="deposit-grid__body__info__date">{{ dateFormat }}</p>
+					<p class="deposit-grid__body__info__category">{{ category }}</p>
+				</div>
+			</div> <!-- end of .deposit-grid__body -->
+			
+			<!-- Dropdown Trigger -->
+			<div class="deposit__more-wrapper">
+				<a class='dropdown-button deposit-more-btn hide-elem' href='#' data-activates='depositMore{{_id}}'>
+					<i class="material-icons">more_vert</i>
+				</a>
+				<!-- Dropdown Structure -->
+				<ul id='depositMore{{_id}}' class='dropdown-content'>
+					<li><a href="#!" class="deposit__remove">Remove</a></li>
+					<!-- <li><a href="#!" class="deposit__edit">Edit</a></li> -->
+				</ul>
+			</div> <!-- end of .deposit-more-wrapper -->
+		</div><!-- end .deposit -->
+	</div> <!-- end of .col .s4 -->
+	
+</template>

@@ -1,0 +1,43 @@
+// 1 - TOOLS
+@import '1-tools/bourbon/bourbon';
+@import '1-tools/fonts';
+// @import '1-tools/normalize';
+@import '1-tools/vars';
+@import '1-tools/overwrite-materialize';
+@import '1-tools/bem_mixen';
+// @import '1-tools/materialize-vars';
+
+@import '1-tools/animations/test';
+@import '1-tools/animations/screch-animation';
+
+
+// 2 - BASICS
+@import '2-basics/body-element';
+@import '2-basics/selection-colors';
+@import '2-basics/links';
+@import '2-basics/typography';
+@import '2-basics/layout';
+@import '2-basics/mixens/material-shadow';
+
+
+// 3 - Modules
+@import '3-modules/header';
+@import '3-modules/footer';
+@import '3-modules/header-hero';
+@import '3-modules/new-deposit-modal';
+@import '3-modules/buttons';
+@import '3-modules/filter';
+@import '3-modules/deposit-single';
+@import '3-modules/deposit-single-grid';
+@import '3-modules/toast-material';
+@import '3-modules/hamburger-menu';
+@import '3-modules/new-category-modal';
+@import '3-modules/todo-single';
+@import '3-modules/new-task';
+
+
+
+// 4 - pages
+@import '4-pages/profile-page';
+@import '4-pages/dashboard';
+@import '4-pages/home';

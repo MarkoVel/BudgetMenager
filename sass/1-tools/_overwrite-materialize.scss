@@ -1,0 +1,66 @@
+input:not([type]):focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $accnet !important;
+    box-shadow: 0 1px 0 0 $accnet !important;
+}
+
+
+input:not([type]):focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=datetime]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=search]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=text]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: $accnet !important;
+}
+
+.btn {
+    background: $accnet;
+}
+.btn:hover, .btn-large:hover {
+    background: lighten($accnet, 8);
+}
+
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: $accnet;
+}
+
+// RADIO BUTTONS
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+    border: 2px solid $accnet;
+    background-color: $accnet;
+}
+[type="radio"].with-gap:checked + label:before {
+    border: 2px solid $accnet;
+}
+
+.input-field .prefix.active {
+	color: $accent;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: $accent;
+}
+
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: lighten($accent, 15% );
+}

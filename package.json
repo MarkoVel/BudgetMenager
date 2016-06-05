@@ -1,0 +1,17 @@
+{
+  "name": "blazebase",
+  "version": "1.0.0",
+  "description": "Clone or download this repo. Browse to wherever downloaded in your terminal.",
+  "main": "routes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.13.0"
+  },
+  "devDependencies": {
+    "gm": "^1.22.0"
+  }
+}

@@ -1,0 +1,95 @@
+.deposit
+    margin-bottom: 15px
+    height: 64px
+    background: #fff
+    border-radius: 2px
+    padding: 0 50px
+    box-sizing: border-box
+    justify-content: space-between
+    align-items: center
+    display: flex
+    border-left: 5px solid transparent
+    position: relative
+    &.cost
+        border-left-color: $red-light
+    &.profit
+        border-left-color: $green-light
+    &:hover
+        .hide-elem
+            opacity: 1
+
+    .hide-elem
+        opacity: 0
+        transition: opacity 0.2s ease-in-out
+        @media(max-width: 1024px)
+            opacity: 1
+
+    +e('text')
+        font:
+            size: 20px
+            weight: bold
+        letter-spacing: 0.025em
+
+    +e('category')
+        color: $gray-dark
+        margin-left: 10px
+        line-height: 1
+        font-size: 13px
+        letter-spacing: 0.025em
+
+    +e('date')
+        color: $gray-dark
+        flex: 1
+        margin-left: 10px
+        line-height: 1
+        font-size: 12px
+
+    +e('value')
+        @extend .deposit__text
+        font-size: 26px
+
+        &.cost
+            color: $red-light
+            &::before
+                content: '-'
+        &.profit
+            color: $green-light
+            &::before
+                content: '+'
+
+        +e('currency')
+            font-size: 20px
+            font-weight: lighter
+    
+    .deposit__more-wrapper
+        position: absolute
+        top: 15px
+        right: 10px
+        cursor: pointer
+        color: #fff
+        z-index: 200
+
+        i
+            padding: 5px
+            color: $gray-dark
+
+@media(max-width: 768px)
+    .deposit
+        // height: 48px
+        height: auto
+        min-height: 48px
+        padding: 0 50px 0 15px
+        +e('text')
+            font-size: 16px
+        +e('category')
+            font-size: 12px
+            font-weight: 400
+        +e('date')
+            font-size: 12px
+        +e('value')
+            font-size: 18px
+            +e('currency')
+                font-size: 14px
+
+        .deposit__more-wrapper
+            top: 7px

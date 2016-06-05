@@ -1,0 +1,15 @@
+<template name="Avatar">
+    <div class="avatar-wrapper col m3 l3 s12">
+        <input type="file" name="avatar" id="avatar-input">
+        <div class="avatar">
+            <div class="avatar__overlay tooltipped" data-position="bottom" data-delay="50" data-tooltip="Change avatar">
+                <i class="material-icons">mode_edit</i>
+            </div>
+            {{ #if avatarURL }}
+            <div class="avatar__img z-depth-1" style="background-image: url({{avatarURL}});"></div>
+            {{ else }}
+                <div class="avatar__img z-depth-1" style="background-image: url(/img/no-user-image.jpg);"></div>
+            {{ /if }}
+        </div>
+    </div>
+</template>

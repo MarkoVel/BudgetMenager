@@ -1,0 +1,158 @@
+header.header
+    position: absolute
+    top: 0
+    width: 100%
+    padding: 50px
+    box-sizing: border-box
+    justify-content: space-between
+    align-items: center
+    display: flex
+    box-sizing: border-box
+
+    .divider
+        display: none
+
+    .nav-ul
+
+        +e('li')
+            display: inline-block
+            margin-right: 30px
+            &.active
+                .nav-ul__li__link
+                    color: #fff
+
+            +e('icon')
+                display: none
+            +e('link')
+                font-size: 20px
+                display: block
+                height: 100%
+                color: rgba(#fff, 0.7)
+                transition: color 0.2s ease-in-out
+                padding: 5px
+                margin-top: -20px
+
+                &:hover,
+                &.active
+                    color: #fff
+
+.logo
+
+    &.on-center
+        +position(absolute, 50% null null 50%)
+        transform: translate( -50%, -50%)
+
+    +e('span')
+        font:
+            size: 40px
+        letter-spacing: 0.075em
+        line-height: 1
+        display: inline
+
+        +m('one')
+            font-weight: bold
+            color: #fff
+
+        +m('two')
+            color: #19608f
+
+@media (max-width: 1024px)
+    header.header
+        flex-direction: column
+        padding: 50px 10px
+
+    .nav-ul
+        margin-top: 40px
+
+@media (max-width: 1024px)
+    body.nav-open
+        header.header
+            .nav-overlay
+                opacity: 1
+                pointer-events: auto
+            .nav-ul
+                left: 0%
+
+    header.header
+        .divider
+            display: block
+            border-bottom: 1px solid $gray-light
+            height: 0
+            overflow: hidden
+            background-color: none
+            width: 100%
+        .nav-ul
+            +z-depth(5)
+            +position(fixed, 0px null 0px -100%)
+            width: 380px
+            background: #fff
+            z-index: 800
+            margin: 0
+            align-items: flex-start
+            flex-direction: column
+            justify-content: flex-start
+            display: flex
+            transition: 0.4s ease-in-out
+            overflow-y: auto 
+
+            +e('li')
+                display: block
+                width: 100%
+                margin: 0 !important
+                justify-content: space-between
+                align-items: center
+                display: flex
+                &.active
+                    background: $gray-light
+                    .nav-ul__li__icon,
+                    .nav-ul__li__link
+                        color: $accent
+                        i
+                            color: $accent
+
+
+                +e('icon')
+                    display: block
+                    margin-left: 16px
+
+                    i
+                        color: rgba(#000, .54)
+
+                +e('link')
+                    flex: 1
+                    margin: 0
+                    height: 48px
+                    line-height: 48px
+                    font-size: 16px
+                    color: rgba(#000, .54)
+                    padding: 0
+                    margin-left: 16px
+                    font-weight: 500
+
+                    &.active,
+                    &:hover
+                        color: $accent
+
+        .nav-overlay
+            opacity: 0
+            pointer-events: none;
+            content: ''
+            display: block
+            +position(fixed, 0px 0px 0px 0px)
+            background: rgba(#000, .5)
+            z-index: 700
+            transition: 0.4s ease-in-out
+@media (max-width: 600px)
+    header.header
+        .nav-ul
+            width: 280px
+
+@media (max-width: 450px)
+    header.header
+        .logo 
+            +e('span')
+                font-size: 30px
+
+.box
+    +size(100px)
+    margin: 30px 200px

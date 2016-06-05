@@ -1,0 +1,10 @@
+<template name="MainLayout">
+    {{> Header}}
+    
+    <main class="main-layout">
+        {{#transition in="screchOpen" out="screchClose" delay="0"}}
+            {{> Template.dynamic template=main}}
+        {{/transition}}
+    </main>
+    {{> Footer }}
+</template>

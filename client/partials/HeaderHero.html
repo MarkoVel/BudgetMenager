@@ -1,0 +1,22 @@
+<template name="HeaderHero">
+    <div class="header-hero z-depth-1">
+        {{#if isActiveRoute 'home'}}
+        <!-- .logo -->
+        <div class="logo on-center">
+            <div class="logo__span logo__span--one">Budget</div>&nbsp;
+            <div class="logo__span logo__span--two">Menager</div>
+        </div>
+        <!-- end .logo -->
+        {{ else }}
+        <div class="t-money">
+            <div class="t-money__number">{{ getMoney.money }}</div>
+            <div class="t-money__curr">{{ getMoney.currency }}</div>
+        </div>
+        {{/if}}
+    </div>
+    {{#if isActiveRoute 'deposit'}}
+        <div class="new-deposit-btn-wrapper">
+            <a class="new-deposit-btn btn-floating btn-large waves-effect"><i class="material-icons">add</i></a>
+        </div>
+    {{/if}}
+</template>

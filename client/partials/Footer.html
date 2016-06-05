@@ -1,0 +1,66 @@
+<template name="Footer">
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">BudgetMenager</h5>
+                    <p class="grey-text text-lighten-4">
+                        Budget Menager is a web application with a view to monitoring and organizing your money.
+                        <br>
+                        Created & curated by <a class="waves-effect waves-light modal-trigger white-text" href="#author">Marko Velickovic</a>
+                      <!-- Modal Structure -->
+                    </p>
+                    
+                    <div id="author" class="modal modal-fixed-footer author">
+                        <div class="modal-content">
+                            <h2 class="center-align author__name">Marko Velickovic</h2>
+                            <div class="row author-row">
+                                <div class="col l6 m12 s12 author__img"></div>
+                                <div class="col l6 m12 s12 author__text">
+                                    <p>
+                                        Hey, I'm Marko a young ambitious UI / Web designer and Front-End developer. Started designing in Photoshop and reached the level of a full-stack designer. Always devoted to job. 
+                                        Owns a pretty decent knowledge in HTML, CSS/SASS, JavaScript, PHP, Git, Meteorjs, Gulp and WordPress.
+                                    </p>
+                                    <a href="http://markovelickovic.net/">markovelickovic.net</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        {{ #if currentUser }}
+                            <li>
+                                <a class="nav-ul__li__link waves-effect waves-light grey-text text-lighten-3" href="/deposit">Desposit</a>
+                            </li>
+                            <li>
+                                <a class="nav-ul__li__link waves-effect waves-light grey-text text-lighten-3" href="/dashboard">Dasboard</a>
+                            </li>
+                            <li>
+                                <a class="nav-ul__li__link waves-effect waves-light grey-text text-lighten-3" href="/profile">Profile</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-ul__li__link waves-effect waves-light grey-text text-lighten-3 logout ">Logout</a>
+                            </li>
+                        {{ else }}
+                            <li>
+                                <a class="nav-ul__li__link waves-effect waves-light grey-text text-lighten-3" href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-ul__li__link waves-effect waves-light login grey-text text-lighten-3">Login</a>
+                            </li>
+                        {{ /if }}
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Copyright All rights reserved. Marko Velickovic
+                <a class="grey-text text-lighten-4 right" href="http://markovelickovic.net" target="_blank"><span>Created & curated by </span>Marko Velickovic</a>
+            </div>
+        </div>
+    </footer>
+</template>

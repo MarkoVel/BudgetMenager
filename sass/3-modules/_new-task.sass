@@ -1,0 +1,42 @@
+.new-task-wrapper
+	padding-left: 52px
+	
+	.new-task-row
+		width: 100%
+		align-items: center
+		justify-content: space-between
+		display: flex
+
+		.new-task-submit
+			margin-left: 10px
+			z-index: 0
+		
+		.form-group
+			width: 100%
+		// .form-group:first-child
+		// 	width: 80%
+		// .form-group:last-child
+		// 	width: 19%
+		//  
+	@media(max-width: 640px)
+		padding-left: 35px
+
+.new-task-form-toggle
+	align-items: center
+	justify-content: flex-start
+	display: flex
+	color: $red-light
+	padding-left: 52px
+	cursor: pointer
+	margin-top: 15px
+
+	.toggle-icon
+		+size(20px)
+
+		i
+			font-size: 20px
+			line-height: 20px
+
+	.toggle-text
+		display: 16px
+		margin-left: 15px

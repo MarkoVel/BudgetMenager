@@ -1,0 +1,39 @@
+<template name="Filter">
+    <div class="row filters-row valign-wrapper">
+        <div class="filter col l6 s12">
+            <div class="filter__group filter__group--all">
+                <input class="with-gap" value="all" name="filter" type="radio" id="all" {{ isFilter null }} />
+                <label class="waves-effect" for="all">All</label>
+            </div><!-- end .filter__group -->
+
+            <div class="filter__group filter__group--cost">
+                <input class="with-gap" value="cost" name="filter" type="radio" id="cost" {{ isFilter 'cost' }} />
+                <label class="waves-effect" for="cost">Cost</label>
+            </div><!-- end .filter__group -->
+
+            <div class="filter__group filter__group--profit">
+                <input class="with-gap" value="profit" name="filter" type="radio" id="profit" {{ isFilter 'profit' }} />
+                <label class="waves-effect" for="profit">Profit</label>
+            </div><!-- end .filter__group -->
+        </div><!-- end .filter -->
+        
+<!--         <div class="search col l4 m4 s12">
+            <div class="input-field">
+                <i class="material-icons prefix">search</i>
+                <input id="search" type="text">
+                <label for="search">Search</label>
+            </div>
+        </div> -->
+
+        <div class="view-filter col l6 s12 right-align">
+            <div class="filter__group filter__group--cost">
+                <input class="with-gap" value="list" name="view-filter" type="radio" id="list" {{ isListView }} />
+                <label class="waves-effect" for="list"><i class="material-icons">view_list</i></label>
+            </div><!-- end .filter__group -->
+            <div class="filter__group filter__group--cost">
+                <input class="with-gap" value="grid" name="view-filter" type="radio" id="grid" {{ isGridView }}/>
+                <label class="waves-effect" for="grid"><i class="material-icons">view_module</i></label>
+            </div><!-- end .filter__group -->
+        </div>
+    </div> <!-- end of /row -->
+</template>

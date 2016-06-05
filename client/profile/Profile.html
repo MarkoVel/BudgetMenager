@@ -1,0 +1,97 @@
+<template name="Profile">
+    <!-- .content -->
+    <div class="profile-page conent content-pull-top z-depth-4">
+
+        <!-- floating btn for edit -->
+        <a class="edit-profile-btn btn-floating btn-large waves-effect waves-dark"><i class="material-icons">edit</i></a>
+
+        <!-- profile info -->
+        <div class="profile-info">
+            <div class="top-info row">
+
+                {{> Avatar }}
+                <div class="name-and-email col l9 s12">
+                    <!-- .profile-info__group -->
+                    <div class="profile-info__group">
+                        <p class="profile-info__group__text">Name:</p>
+                        <p class="profile-info__group__value">{{ getUser.fullName }}</p>
+                    </div><!-- end .profile-info__group -->
+
+                    <!-- .profile-info__group -->
+                    <div class="profile-info__group">
+                        <p class="profile-info__group__text">Email:</p>
+                        <p class="profile-info__group__value">{{ getUser.email }}</p>
+                    </div><!-- end .profile-info__group -->
+                </div>
+            </div> <!-- end of .row -->
+                
+            <hr>
+            
+            <!-- .profile-info__group -->
+            <div class="profile-info__group">
+                <p class="profile-info__group__text">Website:</p>
+                <p class="profile-info__group__value">{{ getUser.website }}</p>
+            </div><!-- end .profile-info__group -->
+
+            <!-- .profile-info__group -->
+            <div class="profile-info__group">
+                <p class="profile-info__group__text">Bio:</p>
+                <p class="profile-info__group__value profile-info__group__value--small">{{ getUser.bio }}</p>
+            </div><!-- end .profile-info__group -->
+
+            <!-- .profile-info__group -->
+            <div class="profile-info__group">
+                <p class="profile-info__group__text">Currency:</p>
+                <p class="profile-info__group__value">{{ getUser.currency }}</p>
+            </div><!-- end .profile-info__group -->
+
+        </div><!-- end .profile-info -->
+
+        <!-- MODALS -->
+        <div id="edit-profile" class="modal">
+            <div class="modal-content">
+
+                <form id="edit-profile-form" class="center-align">
+
+                    <div class="input-field">
+                        <input value="{{ getUser.fullName }}" id="fullName" type="text" class="fullName validate">
+                        <label class="active" for="fullName">Full Name</label>
+                    </div>
+
+                    <!-- <div class="input-field">
+                        <input value="{{ getUser.email }}" id="email" type="email" class="email">
+                        <label class="active" for="email">Email</label>
+                    </div> -->
+
+                    <div class="input-field">
+                        <input value="{{ getUser.website }}" id="website" type="text" class="website">
+                        <label class="active" for="website">Website</label>
+                    </div>
+
+                    <div class="input-field">
+                        <textarea id="bio" class="materialize-textarea bio">{{ getUser.bio }}</textarea>
+                        <label class="active" for="bio">Bio</label>
+                    </div>
+
+<!--                     <div class="input-field col s12">
+                        <select class="currencySelect">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="RSD">RSD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="CAD">CAD</option>
+                        </select>
+                      <label>Currency</label>
+                    </div>
+ -->
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Save
+                        <i class="material-icons right">save</i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </div><!-- end .content -->
+</template>

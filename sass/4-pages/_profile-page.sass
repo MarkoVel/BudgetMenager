@@ -1,0 +1,126 @@
+.profile-page
+    position: relative
+    // padding-top: 160px
+
+    #avatar-input
+        display: none
+        position: absolute
+    .avatar-wrapper
+        display: inline-block
+    .avatar
+        position: relative
+        z-index: 1
+        // top: -100px
+        // left: 50%
+        // transform: translateX(-50%)
+        +size(200px)
+        border-radius: 50%
+        overflow: hidden
+
+        +e('img')
+            +size(200px)
+            border-radius: 50%
+            background:
+                size: cover
+                position: center
+                repeat: no-repeat
+
+        +e('overlay')
+            background: rgba(#000, 0)
+            +position(absolute, 0px)
+            border-radius: 50%
+            transition: background, filter, 0.2s ease-in-out
+            cursor: pointer
+            align-items: center
+            text-align: center
+            display: flex
+            opacity: 0
+            z-index: 0
+
+            .material-icons
+                margin: 0 auto
+                color: #fff
+                font-size: 26px
+                position: relative
+                z-index: 200
+
+            &:hover
+                opacity: 1
+                background: rgba(#000, 0.5)
+                filter: brightness(50%)
+
+
+    .profile-info
+        .name-and-email
+            padding: 0
+        +e('group')
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+
+            +e('text')
+                font-size: 18px
+                color: $gray-dark
+                margin: 0
+                line-height: 1
+                margin-bottom: 15px
+
+            +e('value')
+                font-size: 28px
+                margin: 0
+                line-height: 1
+
+                +m('small')
+                    font-size: 22px
+                    line-height: 2
+
+
+@media(max-width: 1336px)
+    .profile-page
+
+        .avatar
+            +size(180px)
+
+            +e('img')
+                +size(180px)
+
+@media(max-width: 1024px)
+    .profile-page
+        .avatar-wrapper
+            display: block
+            width: 100% !important
+            margin-bottom: 30px
+            .avatar
+                margin: 0 auto
+                text-align: center
+
+    .profile-info
+        text-align: center
+
+@media(max-width: 768px)
+    .profile-page
+
+        .avatar
+            +size(150px)
+
+            +e('img')
+                +size(150px)
+
+        .profile-info
+            +e('group')
+
+                +e('text')
+                    font-size: 16px
+                    margin-bottom: 15px
+
+                +e('value')
+                    font-size: 20px
+
+@media(max-width: 640px)
+    .profile-page
+
+        .avatar
+            +size(100px)
+
+            +e('img')
+                +size(100px)

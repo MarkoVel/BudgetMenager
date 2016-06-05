@@ -1,0 +1,66 @@
+.header-hero
+    background: $accnet
+    position: relative
+    height: 600px
+    width: 100%
+    z-index: -1
+    background:
+        image: url(/img/header-hero-bg.png)
+        position: right bottom
+        size: cover
+
+    .t-money
+        position: absolute
+        top: 55%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: auto
+        text-align: center
+        display: inline-block
+
+        +e('number')
+            font-size: 220px
+            font-weight: 100
+            color: #fff
+            margin: 0
+            display: inline-block
+
+        +e('curr')
+            display: inline-block
+            font-size: 50px
+            position: absolute
+            bottom: 20%
+            left: 100%
+
+@media(max-width: 1336px)
+    .header-hero
+        height: 500px
+
+        .t-money
+            +e('number')
+                font-size: 170px
+
+            +e('curr')
+                font-size: 40px
+
+@media(max-width: 1024px)
+    .header-hero
+        height: 400px
+
+        .t-money
+            +e('number')
+                font-size: 130px
+
+            +e('curr')
+                font-size: 30px
+
+@media(max-width: 640px)
+    .header-hero
+        height: 300px
+
+        .t-money
+            +e('number')
+                font-size: 80px
+
+            +e('curr')
+                font-size: 25px

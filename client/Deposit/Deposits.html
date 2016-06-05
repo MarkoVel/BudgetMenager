@@ -1,0 +1,22 @@
+<template name="Deposits">
+    <div class="container">
+        {{> Filter }}
+        <div class="row">
+	        {{ #if getDepositNumber}}
+		        {{#transition in="screchOpen" out="screchClose"}}
+		            {{#each deposits }}
+		            	{{ #if isGridView }}
+		            		{{> DepositSingleGrid }}
+		        		{{ else }}
+		                	{{> DepositSingle }}
+		                {{ /if }}
+		            {{/each}}
+		        {{/transition}}
+			{{ else }}
+				<h3 class="center-align">You don't have deposit change</h3>
+	        {{ /if }}
+       </div>
+        {{> NewDepositModal }}
+        {{> EditDepositModal }}
+    </div><!-- end .container -->
+</template>

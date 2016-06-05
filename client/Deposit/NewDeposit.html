@@ -1,0 +1,38 @@
+<template name="NewDepositModal">
+    <div id="NewDepositModal" class="modal modal-fixed-footer">
+
+        {{#autoForm collection="Deposit" type="insert" id="NewDepositForm" resetOnSuccess=true }}
+
+            <div class="modal-header valign-wrapper row">
+                <div class="modal-input-group col s12">
+                    {{> afQuickField name="name" class="" placeholder="Enter deposit title" tabindex="1"}}
+                </div><!-- end .modal-input-group -->
+                <!-- submit button -->
+                <button type="submit" class="new-deposit-submit btn-submit btn-floating btn-large waves-effect" name="NewDepositSubmit"><i class="material-icons" tabindex="6">send</i></button>
+            </div><!-- end .modal-header -->
+            <div class="modal-main">
+                <div class="row">
+                    <div class="modal-input-group modal-input-group--value-currency col s12 m12 l6">
+                        {{> afFormGroup name="value" placeholder="Enter value" class="modal-input-group__input" label-class="hide" tabindex="2"}}
+                        <span class="modal-currency">{{ currency }}</span>
+                    </div><!-- end .modal-input-group -->
+                    <div class="modal-input-group col s12 m12 l6">
+                        {{> afFormGroup name="type" placeholder="Select type" label-class="hide" firstOption="(Select type)" tabindex="3"}}
+                    </div><!-- end .modal-input-group -->
+                </div> <!-- end of .row -->
+                
+                <div class="row">
+                    <div class="modal-input-group col s12 m12 l12">
+                        {{> afFormGroup name="category" label-class="hide" options=getStaticCategories firstOption="(Select category)" tabindex="4"}}
+                    </div><!-- end .modal-input-group -->
+
+                    <!-- <div class="modal-input-group col s12 m12 l6"> -->
+                        <!-- {{> afFormGroup name="categorySecund" id="categorySecund" placeholder="Or choouse another" class="" tabindex="5"}} -->
+                    <!-- </div> --><!-- end .modal-input-group -->
+                </div> <!-- end of .row -->
+                
+
+            </div><!-- end .modal-main -->
+        {{/autoForm}}
+    </div>
+</template>

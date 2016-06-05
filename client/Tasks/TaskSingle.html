@@ -1,0 +1,31 @@
+<template name="TaskSingle">
+	<div class="todo {{ isChecked }} task-{{_id}}">
+		<div class="todo__checkbox">
+			<input type="checkbox" class="filled-in todo__checkbox__input" id="input-{{_id}}" {{ isChecked }} />
+			<label for="input-{{_id}}"></label>
+		</div>
+		<div class="todo__update-form">
+			{{#autoForm collection="Task" type="update" doc=this id=UpdateTaskFormId class="update-task-form" resetOnSuccess=false autosave=true }}
+				<div class="new-task-row">
+					{{> afFormGroup name="title" placeholder="Enter title" class="update-task-form-input" data-id=this._id label-class="hide" value=this.title}}
+					<!-- <button type="submit" class="btn-submit btn btn-small waves-effect" name="updateTaskSubmit"><i class="material-icons">send</i></button> -->
+				</div>
+			{{/autoForm}}
+			<button class="btn btn-small waves-effect red update-task-close"><i class="material-icons">close</i></button>
+		</div>
+		<div class="todo__text">
+			{{title}}
+		</div>
+		<div class="todo__more-wrapper">
+			<a class='dropdown-button hide-elem' href='#' data-activates='edit{{_id}}'>
+				<i class="material-icons">more_vert</i>
+			</a>
+
+			<!-- Dropdown Structure -->
+			<ul id='edit{{_id}}' class='dropdown-content'>
+				<li><a href="#!" class="task-remove">Remove</a></li>
+				<li><a href="#!" class="task-edit">Edit</a></li>
+			</ul>
+		</div> <!-- end of .todo__todo__more-wrapper -->
+	</div> <!-- end of .todo -->
+</template>

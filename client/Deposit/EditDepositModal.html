@@ -1,0 +1,26 @@
+<template name="EditDepositModal">
+    <div id="EditDepositModal" class="modal modal-fixed-footer">
+
+        {{#autoForm collection="Deposit" type="update" id="EditDepositForm" doc=selectedDepositDoc resetOnSuccess=true }}
+
+            <div class="modal-header valign-wrapper">
+                <div class="modal-input-group">
+                    {{> afQuickField name="name" class="" placeholder="Enter deposit title" tabindex="1"}}
+                </div><!-- end .modal-input-group -->
+                <!-- submit button -->
+                <button type="submit" class="new-deposit-submit btn-submit btn-floating btn-large waves-effect" name="NewDepositSubmit"><i class="material-icons" tabindex="5">send</i></button>
+            </div><!-- end .modal-header -->
+            <div class="modal-main">
+                <div class="modal-input-group row">
+                    {{> afFieldInput name="value" placeholder="Enter value" class="col s11" tabindex="2"}}
+                    <span class="modal-currency col s1">{{ currency }}</span>
+                </div><!-- end .modal-input-group -->
+
+                <div class="modal-input-group">
+                    {{> afFormGroup name="type" placeholder="Select type" tabindex="3"}}
+                </div><!-- end .modal-input-group -->
+
+            </div><!-- end .modal-main -->
+        {{/autoForm}}
+    </div>
+</template>

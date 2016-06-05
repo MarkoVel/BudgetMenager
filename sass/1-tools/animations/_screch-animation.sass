@@ -1,0 +1,31 @@
+// screchOpen
+@keyframes screchOpen
+    0%, 20%, 40%, 60%, 80%, 100%
+        transition-timing-function: $ease-in-back
+
+    0%
+        opacity: 0
+        transform: translateY(-10%) scaleX(.7)
+    100%
+        opacity: 1
+        transform: translateY(0%) scaleX(1)
+
+.screchOpen
+    transform-origin: center top
+    animation: screchOpen .3s both
+
+// screchClose
+@keyframes screchClose
+    0%, 20%, 40%, 60%, 80%, 100%
+        transition-timing-function: $ease-in-back
+
+    0%
+        opacity: 1
+        transform: translateY(0%) scaleX(1)
+    100%
+        opacity: 0
+        transform: translateY(-10%) scaleX(.7)
+
+.screchClose
+    transform-origin: center top
+    animation: screchClose .3s both

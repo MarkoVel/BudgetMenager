@@ -1,0 +1,16 @@
+<template name="Header">           
+    <header class="header">
+        {{#if isNotActiveRoute 'home'}}
+        <!-- .logo -->
+        <div class="logo">
+            <div class="logo__span logo__span--one">Budget</div>&nbsp;
+            <div class="logo__span logo__span--two">Menager</div>
+        </div>
+        <!-- end .logo -->
+        {{ /if }}
+        
+        {{> MainNav }}
+    </header>
+    {{> HeaderHero}}
+    {{> LoginModal }}
+</template>

@@ -1,0 +1,113 @@
+#NewDepositModal,
+#NewCategoryModal,
+#EditDepositModal
+
+    .modal-header
+        background: $accent
+        color: #fff
+        min-height: 200px
+        position: relative
+        padding: 0 100px
+        margin: 0
+
+        input
+            +placeholder
+                color: #fff
+
+        .new-deposit-submit
+            background: #fff
+            position: absolute
+            right: 50px
+            bottom: -28px
+
+            i
+                color: $accnet
+
+        label
+            color: #fff
+
+        input.form-control
+            border-bottom-color: #fff
+        input:focus
+            border-bottom-color: #000
+
+    .modal-input-group
+        vertical-align: middle
+        box-sizing: border-box
+
+        +m('value-currency')
+            align-items: center
+            justify-content: space-between
+            display: flex
+
+        .form-group
+            flex: 1
+
+        .modal-currency
+            font-size: 24px
+            color: $gray-dark
+
+
+
+    .modal-main
+        padding: 50px 100px
+        box-sizing: border-box
+
+        .modal-input-group
+            margin-bottom: 30px
+            padding: 5px
+
+            .has-error
+                input
+                    border-bottom-color: $red-light
+            .help-block
+                color: $red-light
+
+            input
+                +placeholder
+                    color: $text-color
+
+            &:last-child
+                margin-bottom: 0
+
+@media(max-width: 1336px)
+    #NewDepositModal,
+    #NewCategoryModal,
+    #EditDepositModal
+
+        .modal-header
+            padding: 0 70px
+
+@media(max-width: 1024px)
+    #NewDepositModal,
+    #NewCategoryModal,
+    #EditDepositModal
+    
+        .modal-header
+            padding: 0 50px
+        .modal-main
+            padding: 30px 50px
+
+        .modal-input-group
+            .modal-currency
+                font-size: 20px
+
+@media(max-width: 768px)
+    #NewDepositModal,
+    #NewCategoryModal,
+    #EditDepositModal
+    
+        .modal-header
+            padding: 0 50px
+        .modal-main
+            padding: 30px 50px
+
+@media(max-width: 640px)
+    #NewDepositModal,
+    #NewCategoryModal,
+    #EditDepositModal
+    
+        .modal-header
+            padding: 0 20px
+        .modal-main
+            padding: 30px 20px

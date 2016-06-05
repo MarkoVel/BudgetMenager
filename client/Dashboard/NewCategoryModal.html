@@ -1,0 +1,13 @@
+<template name="NewCategoryModal">
+    <div class="modal modal-fixed-footer" id="NewCategoryModal">
+        {{#autoForm collection="Cat" type="insert" id="NewCategoryForm" resetOnSuccess=true }}
+            <div class="modal-header modal-fixed-footer valign-wrapper">
+                <div class="modal-input-group">
+                    {{> afQuickField name="name" class="" placeholder="Enter cateogry title" tabindex="1"}}
+                </div><!-- end .modal-input-group -->
+                <!-- submit button -->
+                <button type="submit" class="new-deposit-submit btn-submit btn-floating btn-large waves-effect" name="NewDepositSubmit"><i class="material-icons" tabindex="5">send</i></button>
+            </div><!-- end .modal-header -->
+        {{/autoForm}}
+    </div>
+</template>

@@ -1,0 +1,35 @@
+.filters-row
+	margin: 50px 0
+	.col
+		padding: 0
+.filter
+    // text-align: center
+
+    +e('group')
+        display: inline-block
+        margin: 0px 10px
+
+        input
+        label
+
+@media(max-width: 768px)
+	
+	.filters-row
+		flex-direction: column
+		.filter,
+		.view-filter
+			text-align: center
+			
+		.view-filter
+			margin-top: 20px
+
+	    
+@media(max-width: 640px)
+	.filters-row
+		margin: 30px 0
+
+		.filter,
+		.view-filter
+			text-align: center
+		
+		.view-filter

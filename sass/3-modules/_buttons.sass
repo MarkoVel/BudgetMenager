@@ -1,0 +1,51 @@
+.btn-box
+    &.left
+        text-align: left
+    &.center
+        text-align: center
+    &.right
+
+        text-align: right
+
+// DEPOSIT PAGE FLOATING BUTTON
+.new-deposit-btn-wrapper
+    text-align: center
+    width: 100%
+    .new-deposit-btn
+        margin-top: -28px
+        background: #fff
+        // +position(absolute, null null -28px 50%)
+        // z-index: 100
+
+        i
+            color: $accnet
+
+// DASHBOARD PAGE FLOATING BUTTON
+.add-category-btn
+    background: #fff
+    +position(absolute, 75px -28px null null)
+    i
+        color: $accnet
+
+// PROFIEL PAGE FLOATING BUTTON
+.edit-profile-btn
+    background: #fff
+    +position(absolute, 75px -28px null null)
+
+    i
+        color: $accnet
+
+// SMALL BUTTON
+.btn-small 
+    height: 26px
+    line-height: 26px
+    font-size: 13px
+    padding: 0 20px
+
+@media(max-width: 768px)
+    .new-deposit-btn,
+    .add-category-btn,
+    .edit-profile-btn
+        +position(fixed, auto 20px 20px auto)
+        z-index: 500
+        margin: 0 

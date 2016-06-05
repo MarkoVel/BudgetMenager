@@ -1,0 +1,42 @@
+<template name="Home">
+	<div class="row account-wrapper parallax-container ">
+		<div class="parallax">
+			<img src="img/bag.jpg" alt="">
+		</div>
+		<div class="container">
+			<div class="col m12 s12 l6">
+				<h2 class="account-heading">Sign in and menage your money</h2>
+				<p class="account-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, magni dolorum facilis, dolore dolorem placeat distinctio error soluta cumque voluptatibus, enim impedit deleniti recusandae debitis vel laboriosam. Ab, ratione, vitae.</p>
+			</div>
+			<div class="col m12 s12 l6 account-form-box">
+				{{> atForm state='signIn'}}
+		   </div>
+		</div>	
+	</div>
+
+	<div class="or-wrapper">
+		<div class="or-wrapper__box">OR</div>
+	</div>
+
+	<div class="row account-wrapper parallax-container ">
+		<div class="parallax">
+			<img src="img/pig.jpg" alt="">
+		</div>
+		<div class="container">
+			<div class="col m12 s12 l6 account-form-box">
+				{{> atForm state='signUp'}}
+		   </div>
+			<div class="col m12 s12 l6">
+				<h2 class="account-heading">Sign Up and join million people</h2>
+				<p class="account-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, magni dolorum facilis, dolore dolorem placeat distinctio error soluta cumque voluptatibus, enim impedit deleniti recusandae debitis vel laboriosam. Ab, ratione, vitae.</p>
+			</div>
+		</div>	
+	</div>
+	<section class="tree-screen">
+		<div class="screen-wrapper">
+			<div class="screen small one"></div>
+			<div class="screen big two"></div>
+			<div class="screen small tree"></div>
+		</div>
+	</section>
+</template>

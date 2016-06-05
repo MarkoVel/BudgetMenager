@@ -1,0 +1,82 @@
+.deposit-grid
+	background: #fff
+	border-radius: 2px
+	box-sizing: border-box
+	overflow: hidden
+	margin-bottom: 20px
+	position: relative
+	
+	&:hover
+		.hide-elem
+			opacity: 1
+	.hide-elem
+		opacity: 0
+		transition: opacity 0.2s ease-in-out
+		@media(max-width: 1024px)
+            opacity: 1
+
+	+e('header')
+		color: #fff
+		padding: 30px 15px
+
+		&.profit
+			background-color: $green-light
+		&.cost
+			background-color: $red-light
+
+		+e('value')
+			font-size: 40px
+			font-weight: 300
+			text-align: center
+			line-height: 1
+			&::before
+				margin-right: 0px
+			&.cost
+			    &::before
+			        content: '-'
+			&.profit
+			    &::before
+			        content: '+'
+
+			+e('currency')
+				font-size: 25px
+
+	+e('body')
+		padding: 20px
+		box-sizing: border-box
+		p
+			margin-bottom: 0
+		+e('text')
+			text-align: center
+			font-size: 20px
+		+e('info')
+			margin-top: 25px
+			font-size: 13px
+			color: rgba($text-color, .7)
+			justify-content: space-between
+			align-items: center
+			display: flex
+
+	.deposit__more-wrapper
+		position: absolute
+		top: 10px
+		right: 10px
+		cursor: pointer
+		color: #fff
+		z-index: 200
+
+		i
+			padding: 5px
+			color: #fff
+
+	@media(max-width: 640px)
+		+e('header')
+			padding: 15px
+			+e('value')
+				font-size: 30px
+				+e('currency')
+					font-size: 20px
+		+e('body')
+			padding: 15px
+			+e('info')
+				margin-top: 15px

@@ -1,0 +1,43 @@
+<template name="MainNav">
+    <div class="nav-overlay"></div>
+    
+    <div class="material--burger">
+        <span></span>
+    </div>
+
+
+    <ul class="nav-ul">
+
+        {{ #if currentUser }}
+            <li class="nav-ul__li {{isActiveRoute 'deposit'}}">
+                <div class="nav-ul__li__icon"><i class="material-icons">attach_money</i></div>
+                <a class="nav-ul__li__link waves-effect waves-light" href="/deposit">Desposit</a>
+            </li>
+            <li class="nav-ul__li {{isActiveRoute 'dashboard'}}">
+                <div class="nav-ul__li__icon"><i class="material-icons">trending_up</i></div>
+                <a class="nav-ul__li__link waves-effect waves-light" href="/dashboard">Dasboard</a>
+            </li>
+            <li class="nav-ul__li {{isActiveRoute 'profile'}}">
+                <div class="nav-ul__li__icon"><i class="material-icons">perm_identity</i></div>
+                <a class="nav-ul__li__link waves-effect waves-light" href="/profile">Profile</a>
+            </li>
+            <li class="nav-ul__li {{isActiveRoute 'todos'}}">
+                <div class="nav-ul__li__icon"><i class="material-icons">format_list_bulleted</i></div>
+                <a class="nav-ul__li__link waves-effect waves-light" href="/todos">Tasks</a>
+            </li>
+            <li class="divider"></li>
+            <li class="nav-ul__li">
+                <a href="" class="nav-ul__li__link waves-effect waves-light logout">Logout</a>
+            </li>
+        {{ else }}
+            <li class="nav-ul__li {{isActiveRoute 'home'}}">
+                <div class="nav-ul__li__icon"><i class="material-icons">home</i></div>
+                <a class="nav-ul__li__link waves-effect waves-light" href="/">Home</a>
+            </li>
+            <li class="divider"></li>
+            <li class="nav-ul__li">
+                <a href="#" class="nav-ul__li__link waves-effect waves-light login">Login</a>
+            </li>
+        {{ /if }}
+    </ul>
+</template>

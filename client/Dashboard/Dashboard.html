@@ -1,0 +1,41 @@
+<template name="Dashboard">
+    <!-- .content -->
+    <div class="dashboard-page conent content-pull-top z-depth-4">
+        <!-- floating btn for edit -->
+        <!-- <a class="add-category-btn btn-floating btn-large waves-effect waves-dark"><i class="material-icons">add</i></a> -->
+
+        {{#if getCategoriesCount }}
+            <div class="total-spent">
+                <p class="total-spent__text">TOTAL SPANT</p>
+                <div class="total-spent__value">
+                    <p class="total-spent__value__num">{{ moneySpent }}</p>
+                    <p class="total-spent__value__currency">{{ currency }}</p>
+                </div><!-- end .total-spent__value -->
+            </div><!-- end .total-spent -->
+        
+            <div class="chart-wrapper">
+                <div id="chart"></div>
+            </div>
+
+            <ul class="spent-ul">
+                {{#if Template.subscriptionsReady}}
+                    {{ #each getCategories }}
+                        <li class="spent-ul__li">
+                            <p class="spent-ul__li__text">{{ name }}</p>
+                            <div class="spent-ul__li__value">
+                                <p class="spent-ul__li__value__num"> - {{ totalSpent }}</p>
+                                <p class="spent-ul__li__value__currency">{{ currency }}</p>
+                            </div>
+                        </li>
+                    {{ /each }}
+                {{ /if }}
+            </ul>
+        {{ else }}
+            <h3 class="center-align">You don't have deposit change</h3>
+        {{/if}}
+
+        <!-- MODAL -->
+        {{> NewCategoryModal }}
+
+    </div><!-- end .content -->
+</template>

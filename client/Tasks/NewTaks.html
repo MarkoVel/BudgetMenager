@@ -1,0 +1,22 @@
+<template name="NewTask">
+	<!-- {{#if newTaskMode}} -->
+		{{#autoForm collection="Task" type="insert" id="NewTaskForm" class="new-task-wrapper" resetOnSuccess=true }}
+			<div class="new-task-row">
+				{{> afFormGroup name="title" placeholder="Enter title" class="new-task-input-title" label-class="hide" autofocus=true}}
+				<button type="submit" class="btn-submit btn btn-small waves-effect new-task-submit" name="NewTaskSubmit"><i class="material-icons">send</i></button>
+			</div>
+			<div class="new-task-buttons right-align">
+				
+				<!-- <button class="btn btn-small waves-effect red new-task-close">Close</button> -->
+				<!-- <button type="submit" class="btn-submit btn btn-small waves-effect" name="NewDepositSubmit"><i class="material-icons">send</i></button> -->
+			</div>
+		{{/autoForm}}
+	<!-- {{ else }}
+		<div class="new-task-form-toggle">
+			<div class="toggle-icon">
+				<i class="material-icons">add</i>
+			</div>
+			<div class="toggle-text">Add task</div>
+		</div>
+	{{/if}} -->
+</template>

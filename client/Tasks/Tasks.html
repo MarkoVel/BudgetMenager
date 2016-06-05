@@ -1,0 +1,23 @@
+<template name="Tasks">
+	<!-- .content -->
+    <div class="tasks-page conent content-pull-top z-depth-4">
+		<!-- Switch -->
+		<div class="switch center-align">
+			<p>Hide Completed</p>
+			<label>
+				Off
+				<input type="checkbox" class="hide-complited" {{ hideComplited }}>
+				<span class="lever"></span>
+				On
+			</label>
+		</div>
+
+		<div class="todos">
+			{{ #each getTasks }}
+				{{> TaskSingle }}
+			{{ /each }}
+		</div>
+
+		{{> NewTask }}
+    </div>
+</template>
